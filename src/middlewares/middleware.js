@@ -8,7 +8,7 @@ exports.middlewareGlobal = (req, res, next) => {
   };
   
   exports.checkCsrfError = (err, req, res, next) => {
-    if(err && 'EBADCSRFTOKEN' === err.code) {
+    if(err) {
       return res.render('404');
     }
   };
